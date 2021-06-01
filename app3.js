@@ -6,7 +6,7 @@ const port = 8083;
 const requestListener = function (req, res) {
     res.setHeader("Content-Type", "application/json");
     res.writeHead(200);
-    res.end(`{"message": "This is app3"}`);
+    res.end(`{"message": "This is app3 ${process.env["key"]}"}`);
 };
 
 const server = http.createServer(requestListener);
